@@ -1,0 +1,32 @@
+Package: duckdf
+Type: Package
+Title: SQL for Dataframes, but with Ducks
+Version: 0.2.1
+Authors@R: person("Phill", "Clarke", email = "phill@mimosadev.org",
+    role = c("aut", "cre"))
+Description: An SQL interface for R dataframes built on the DuckDB embedded
+    analytical database. Dataframes are registered directly with an in-process
+    DuckDB instance and queried with standard SQL, so analyses can join,
+    filter, aggregate and reshape R objects with SQL while results are
+    returned as dataframes, without copying data to an external database
+    server. The package wraps the 'duckdb' R package with a DBI-compliant
+    connection and provides a small, checked surface for the common
+    register-query-unnregister workflow. The underlying engine and its
+    vectorised execution model are described in Raasveldt and Mühleisen
+    (2019) <doi:10.1145/3299869.3320212>.
+License: AGPL-3
+Encoding: UTF-8
+Depends: R (>= 4.2.0)
+Imports: DBI (>= 1.1.3), checkmate, duckdb (>= 1.5.6), jsonlite
+Suggests: bench, data.table, dbplyr, dplyr, duckplyr, knitr, rmarkdown,
+        sqldf, testthat (>= 3.0.0), tibble, withr
+URL: https://github.com/phillc73/duckdf
+BugReports: https://github.com/phillc73/duckdf/issues
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.1
+NeedsCompilation: no
+Packaged: 2026-10-28 13:43:57 UTC; phillc
+Author: Phill Clarke [aut, cre]
+Maintainer: Phill Clarke <phill@mimosadev.org>
+Repository: CRAN
+Date/Publication: 2026-11-13 17:10:14 UTC
